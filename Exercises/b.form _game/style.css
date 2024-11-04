@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Altera para uma única coluna em telas menores */
+    }
+}
+
+body{
+    background-image: url(https://media.istockphoto.com/id/1222034739/pt/vetorial/space-background-starry-night-sky-infinite-universe-and-light-starry-vector-illustration.jpg?s=612x612&w=0&k=20&c=idD7VOYjWxU6Uko0eXTY2GdwJyi_7kjiE1YiJYIN59Y=);
+    background-size: cover;
+}
+
+.container {
+    display: grid;    
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+img {
+    padding: 1px 20px 20px 20px;
+    width: 35rem;
+    box-shadow: 20px 5px 50px rgba(0, 36, 153, 0.5);
+}
+
+.image{
+    grid-row: span 2;
+}
+
+.title, .frase {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+.description {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.frase {
+    font-size: 2rem;
+    margin: 1%;
+    padding: 1%;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.form {
+    text-align: left;
+    margin: 5%;
+}
+
+.description {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.inputs{
+    text-align: left;
+    padding-right: 25rem;
+    box-shadow: 0px 5px 10px rgba(0, 17, 255, 0.452);
+}
+
+.btnConfirmation{
+    padding-left: 0.6em;
+}
+
+.nomesInput {
+
+}
