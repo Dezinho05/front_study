@@ -1,6 +1,8 @@
 let text = document.getElementById("text");
 let p_letters = document.getElementById("letters");
 let p_words = document.getElementById("words");
+let letter_check = document.getElementById('letter_check');
+let word_check = document.getElementById('word_check');
 
 function CountLetter(textLetter) {
   let text_inner = textLetter.value;
@@ -16,16 +18,8 @@ function CountLetter(textLetter) {
 }
 console.log(`Letras: ${CountLetter(text)}.`);
 
-  //single word
-  //every new word base on ASCII code
-  //Maiusculas = 65 a 90
-  //Minuscula =  97 a 122
-  //Digitos = 48 a 57
-  //return /^[a-zA-Z0-9]$/.test(textWord);
-
 function CountWords(textWord) {
   let text_inner = textWord.value;
-  console.log(`Valor: ${textWord.value}`);
   let wordCount = 1;
   for (let j = 0; j < text_inner.length; j++) {
     if (text_inner[j] == " ") {
@@ -38,9 +32,6 @@ function CountWords(textWord) {
   }
   return wordCount;
 }
-
-
-console.log(`Luisa paiaça: ${text.value}.`);
 console.log(`Palavras: ${CountWords(text)}.`);
 
 text.onchange = function Counter() {
@@ -48,6 +39,24 @@ text.onchange = function Counter() {
     p_words.innerText = `Palavras: ${CountWords(text)}.`;
     console.log(text.value);
 }
+
+console.log("Lettercheck: " + letter_check.onchange);
+console.log("Wordcheck: " + word_check.onchange);
+
+letter_check.onchange = function LetterCheck() {
+  if (letter_check == "letter_true") {
+    p_letters.style.visibility = 'hidden'
+  }
+}
+
+
+
+//single word
+//every new word base on ASCII code
+//Maiusculas = 65 a 90
+//Minuscula =  97 a 122
+//Digitos = 48 a 57
+//return /^[a-zA-Z0-9]$/.test(textWord);
 
 //.trim tira espaços antes e depois.
 //.split para separar por espaço

@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <textarea id="text" placeholder="Type here..."></textarea>
+    <textarea id="text" placeholder="Type here..."></textarea><br>
     <p id="letters">Letras: 0.</p>
     <p id="words">Palavras: 0.</p>
+
+    <input type="checkbox" name="letter" id="letter_check" value="letter_true" checked>
+    <label id="letter_label" for="letter_check">Ativar/Desativar contador de Letras.</label>
+  
+    <input type="checkbox" name="word" id="word_check" value="word_true" checked>
+    <label id="word_label">Ativar/Desativar contador de Palavras.</label>
+
     <script src="index.js"></script>
 </body>
 </html>
