@@ -16,7 +16,6 @@ function CountLetter(textLetter) {
   }
   return letterCount;
 }
-console.log(`Letras: ${CountLetter(text)}.`);
 
 function CountWords(textWord) {
   let text_inner = textWord.value;
@@ -32,7 +31,6 @@ function CountWords(textWord) {
   }
   return wordCount;
 }
-console.log(`Palavras: ${CountWords(text)}.`);
 
 text.onchange = function Counter() {
     p_letters.innerText = `Letras: ${CountLetter(text)}.`;
@@ -40,16 +38,23 @@ text.onchange = function Counter() {
     console.log(text.value);
 }
 
-console.log("Lettercheck: " + letter_check.onchange);
-console.log("Wordcheck: " + word_check.onchange);
-
 letter_check.onchange = function LetterCheck() {
-  if (letter_check == "letter_true") {
-    p_letters.style.visibility = 'hidden'
+  //console.log(`Retorno: ${letter_check}`)
+  if (letter_check.checked) {
+    p_letters.style.visibility = "hidden";
+  } else {
+    p_letters.style.visibility = "visible";
   }
 }
 
-
+word_check.onchange = function WordCheck() {
+  //console.log(`Retorno: ${word_check}`)
+  if (word_check.checked) {
+    p_words.style.visibility = 'hidden';
+  } else {
+    p_words.style.visibility = 'visible';
+  }
+}
 
 //single word
 //every new word base on ASCII code
